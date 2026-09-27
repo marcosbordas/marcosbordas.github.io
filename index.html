@@ -327,10 +327,12 @@
         <a href="https://wa.me/5355642848" target="_blank" rel="noopener" class="boton boton-pill">Escribir por WhatsApp</a>
       </div>
 
-      <form class="formulario" data-formulario>
-        <label>Nombre <input type="text" name="nombre" placeholder="Tu nombre" required></label>
-        <label>Correo <input type="email" name="correo" placeholder="tu@correo.com" required></label>
-        <label>¿Qué necesitás? <textarea name="mensaje" rows="5" placeholder="Contame qué hace tu negocio y qué querés que la gente haga al entrar..." required></textarea></label>
+      <form class="formulario" data-formulario
+             data-correo="marcosbordas06@gmail.com"
+             data-asunto="Mensaje desde marcosbordas.github.io">
+        <label>Nombre <input type="text" name="nombre" data-etiqueta="Nombre" placeholder="Tu nombre" required></label>
+        <label>Correo <input type="email" name="correo" data-etiqueta="Correo" placeholder="tu@correo.com" required></label>
+        <label>¿Qué necesitás? <textarea name="mensaje" data-etiqueta="Qué necesita" rows="5" placeholder="Contame qué hace tu negocio y qué querés que la gente haga al entrar..." required></textarea></label>
         <button class="boton" type="submit">Enviar mensaje</button>
         <p class="aviso" data-aviso></p>
       </form>
