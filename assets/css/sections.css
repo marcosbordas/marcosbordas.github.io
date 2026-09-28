@@ -48,7 +48,7 @@
 /* --- Variante A: todo centrado --- */
 .portada {
   position: relative;
-  padding-block: calc(var(--espaciado-enorme) * 1.4) var(--espaciado-enorme);
+  padding-block: var(--espaciado-enorme) var(--espaciado-enorme);
   text-align: center;
 }
 .portada .contenedor { display: flex; flex-direction: column; align-items: center; }
@@ -69,6 +69,11 @@
 @media (max-width: 860px) {
   .portada-b .contenedor { grid-template-columns: 1fr; }
   .portada-b .imagen { order: 0; margin-top: var(--espaciado-grande); }
+
+  /* El menu fijo ya ocupa la parte de arriba de la pantalla, asi que
+     un padding alto de la portada deja un hueco muerto. En el celular
+     se recorta para que el titulo entre casi pegado al menu. */
+  .portada { padding-block: var(--espaciado-grande); }
 
   /* En el celular la foto se come media pantalla y empuja el
      titulo hacia abajo. Se achica a una franja para que el
